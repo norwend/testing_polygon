@@ -17,10 +17,10 @@ std::string method_choose() {
 		}
 		case 2:
 		{
-			std::cout << "vvedite id cheloveka ili gruppi: ";
-			std::string id;	
-			std::cin >> id;
+			std::string id;
 			std::string posts_number;
+			std::cout << "vvedite id cheloveka ili gruppi: ";
+			std::cin >> id;
 			std::cout << "vvedite kolichestvo postov dla obrabotki: ";
 			std::cin >> posts_number;
 			return API::wall_get + API::owner_id + id + API::count + posts_number;
