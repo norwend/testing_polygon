@@ -2,10 +2,6 @@
 
 int main(int argc, char* argv[])
 {
-	std::string method = method_choose();
-	
-	std::string url = API::start_url + method + API::version + API::access_token;
-	
-	std::cout << curl_get(url) << '\n';
+	std::cout << curl_load(url_get()) << '\n';
 	return 0;
 }

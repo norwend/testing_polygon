@@ -1,6 +1,6 @@
 #include "header.hpp"
 
-std::string method_choose() {
+std::string url_get() {
 	int method_num;
 	
 	std::cout << "vyberite metod:\n1. users.get (poluchit' infu o usere)\n2. wall.get (poluchit' infu o zapisiah na stene)\n";
@@ -12,7 +12,7 @@ std::string method_choose() {
 			std::cout << "vvedite id cheloveka: ";
 			std::string id;	
 			std::cin >> id; 
-			return API::users_get + API::user_id + id;
+			return API::start_url + API::users_get + API::user_id + id + API::version + API::access_token;
 			break;
 		}
 		case 2:
@@ -23,7 +23,7 @@ std::string method_choose() {
 			std::cin >> id;
 			std::cout << "vvedite kolichestvo postov dla obrabotki: ";
 			std::cin >> posts_number;
-			return API::wall_get + API::owner_id + id + API::count + posts_number;
+			return API::start_url + API::wall_get + API::owner_id + id + API::count + posts_number + API::version + API::access_token;
 			break;
 		}
 		default:

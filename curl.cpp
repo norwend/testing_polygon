@@ -7,7 +7,7 @@ static size_t write(void *contents, size_t size, size_t nmemb, void *userp)
 }
 
 
-std::string curl_get (std::string url)
+std::string curl_load (std::string url)
 {
 	std::string buffer;
 	CURL *curl;
