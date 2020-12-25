@@ -22,4 +22,6 @@ std::string curl_load (std::string url)
     	curl_easy_cleanup(curl);
 	}
 	return buffer;
-}	
+}
+
+// gpg test
